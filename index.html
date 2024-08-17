@@ -85,12 +85,88 @@
       button,
       li {
         letter-spacing: 0.3px;
+        transition: all 0.2s;
       }
-      nav ul li {
-        padding: 2rem 0 2rem 4rem;
-        cursor: pointer;
-        &:hover {
-          color: rgb(0, 154, 36);
+      @media screen and (max-width: 778px) {
+        nav .navs {
+          /* right-12 top-10 */
+          top: 13px;
+          right: 13px;
+          width: 0px;
+          height: 1px;
+          transition: all 0.4s linear;
+          border-radius: 50%;
+          li {
+            position: absolute;
+            display: none;
+          }
+        }
+        #navs {
+          border-radius: 10px;
+
+          width: 240px;
+          height: 400px;
+          li {
+            display: block;
+            position: relative;
+          }
+        }
+      }
+      nav {
+        animation: load 0.6s linear;
+      }
+      #banner {
+        h1 {
+          animation: sideAnim 2s;
+        }
+        p {
+          animation: load2 2s;
+        }
+        button {
+          animation: load2 2s;
+        }
+        img {
+          animation: sideAnim2 2s;
+        }
+      }
+      @keyframes load {
+        from {
+          opacity: 0;
+          transform: translateY(-50%);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0%);
+        }
+      }
+      @keyframes load2 {
+        from {
+          opacity: 0;
+          transform: translateY(50%);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0%);
+        }
+      }
+      @keyframes sideAnim {
+        from {
+          opacity: 0;
+          transform: translateX(-10%);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0%);
+        }
+      }
+      @keyframes sideAnim2 {
+        from {
+          opacity: 0;
+          transform: translateX(10%);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0%);
         }
       }
     </style>
@@ -100,33 +176,42 @@
       <nav
         class="flex justify-between items-center max-w-[1200px] m-auto md:py-4 xl:mx-4"
       >
-        <div class="brand w-60"><img src="./icons/logo.png" alt="" /></div>
-        <ul open class="flex capitalize md:hidden">
-          <li>home</li>
-          <li>product</li>
-          <li>about</li>
-          <li>contact</li>
+        <div class="brand w-60">
+          <img src="./icons/logo.png" alt="" />
+        </div>
+        <ul
+          open
+          class="navs flex gap-20 capitalize md:bg-gray-800 md:text-white md:w-60 md:justify-center md:items-center md:gap-10 md:absolute right-12 top-10 md:flex-col py-8 cursor-pointer md:rounded-md"
+        >
+          <li id="closeBtn">
+            <i class="text-2xl text-yellow-500 fa-sharp fa-solid fa-xmark"></i>
+          </li>
+          <li class="hover:text-green-500">home</li>
+          <li class="hover:text-green-500">product</li>
+          <li class="hover:text-green-500">about</li>
+          <li class="hover:text-green-500">contact</li>
         </ul>
-        <div class="hidden md:block cursor-pointer text-xl">
+        <div id="mobileMenu" class="hidden md:block cursor-pointer text-xl">
           <i
             class="fa-sharp fa-regular fa-bars-filter border-2 p-3 border-black w-6 h-6 flex justify-center items-center"
           ></i>
         </div>
       </nav>
       <div
+        id="banner"
         class="flex items-center max-w-[1200px] m-auto xl:mx-4 md:flex-col md:mt-7 md:space-y-8"
       >
         <div>
           <h1
-            class="font-bold text-7xl md:text-6xl leading-[75px] uppercase bebas-font mb-1"
+            class="font-bold text-7xl md:text-5xl leading-[75px] uppercase bebas-font mb-1"
           >
             <span class="text-[#FABE4C]">Be the Penguins</span><br /><span
               >of Winter</span
             >
           </h1>
           <p class="w-9/12 mb-3">
-            Choose your febourate clothes for our stock and order after finish
-            this clothes
+            Choose your febourate clothes for our stock and order before finish
+            this all items.
           </p>
           <button
             class="bg-gradient-to-tr from-[#A4BC46] to-[#85A019] text-white py-3 px-6 rounded"
@@ -142,4 +227,5 @@
       </div>
     </header>
   </body>
+  <script src="./app.js"></script>
 </html>
