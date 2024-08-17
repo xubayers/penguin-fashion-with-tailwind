@@ -1,14 +1,22 @@
-h1,
+h1 {
+  letter-spacing: 0.7px;
+}
 h2,
 h3,
 h4 {
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 p,
 button,
 li {
   letter-spacing: 0.3px;
   transition: all 0.2s;
+}
+.cart-roate-img {
+  transition: all 0.3s linear;
+  &:hover {
+    transform: rotateY(30deg);
+  }
 }
 @media screen and (max-width: 778px) {
   nav .navs {
@@ -18,7 +26,7 @@ li {
     width: 0px;
     height: 1px;
     transition: all 0.4s linear;
-    border-radius: 50%;
+    border-radius: 100% 0 100% 100%;
     li {
       position: absolute;
       display: none;
@@ -26,7 +34,7 @@ li {
   }
   #navs {
     border-radius: 10px;
-
+    box-shadow: 0 0 30px #8888886f;
     width: 240px;
     height: 400px;
     li {
