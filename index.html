@@ -33,6 +33,7 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" id="hasLoad" />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Didact+Gothic&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap"
       rel="stylesheet"
@@ -74,104 +75,14 @@
         },
       };
     </script>
-    <style>
-      h1,
-      h2,
-      h3,
-      h4 {
-        letter-spacing: 0.5px;
-      }
-      p,
-      button,
-      li {
-        letter-spacing: 0.3px;
-        transition: all 0.2s;
-      }
-      @media screen and (max-width: 778px) {
-        nav .navs {
-          /* right-12 top-10 */
-          top: 13px;
-          right: 13px;
-          width: 0px;
-          height: 1px;
-          transition: all 0.4s linear;
-          border-radius: 50%;
-          li {
-            position: absolute;
-            display: none;
-          }
-        }
-        #navs {
-          border-radius: 10px;
-
-          width: 240px;
-          height: 400px;
-          li {
-            display: block;
-            position: relative;
-          }
-        }
-      }
-      nav {
-        animation: load 0.6s linear;
-      }
-      #banner {
-        h1 {
-          animation: sideAnim 2s;
-        }
-        p {
-          animation: load2 2s;
-        }
-        button {
-          animation: load2 2s;
-        }
-        img {
-          animation: sideAnim2 2s;
-        }
-      }
-      @keyframes load {
-        from {
-          opacity: 0;
-          transform: translateY(-50%);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0%);
-        }
-      }
-      @keyframes load2 {
-        from {
-          opacity: 0;
-          transform: translateY(50%);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0%);
-        }
-      }
-      @keyframes sideAnim {
-        from {
-          opacity: 0;
-          transform: translateX(-10%);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0%);
-        }
-      }
-      @keyframes sideAnim2 {
-        from {
-          opacity: 0;
-          transform: translateX(10%);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0%);
-        }
-      }
-    </style>
   </head>
   <body class="roboto-font">
+    <div
+      id="loader"
+      class="z-10 fixed w-screen h-screen bg-gray-950 flex justify-center items-center"
+    >
+      <img class="w-3/12" src="./images/loader.gif" alt="" />
+    </div>
     <header class="bg-[#FFFBF0]">
       <nav
         class="flex justify-between items-center max-w-[1200px] m-auto md:py-4 xl:mx-4"
@@ -226,6 +137,28 @@
         </div>
       </div>
     </header>
+    <section>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/ObQVgkdiXOU?si=FLWDpVvX7ARU5J7H"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/ObQVgkdiXOU?si=FLWDpVvX7ARU5J7H"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </section>
   </body>
   <script src="./app.js"></script>
 </html>
