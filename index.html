@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- fontAwedome premium icon cdn link -->
     <link
       rel="stylesheet"
       data-purpose="Layout StyleSheet"
@@ -31,6 +32,7 @@
       rel="stylesheet"
       href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
     />
+    <!-- google fonts link here -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" id="hasLoad" />
@@ -41,7 +43,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Winter Clothes</title>
-
+    <!-- taileind css releted all links -->
     <style type="text/tailwindcss">
       @layer utilities {
         .bebas-font {
@@ -77,19 +79,26 @@
     </script>
   </head>
   <body class="roboto-font">
+    <!-- loader section start -->
     <div
       id="loader"
       class="z-10 fixed w-screen h-screen bg-gray-950 flex justify-center items-center"
     >
       <img class="w-3/12" src="./images/loader.gif" alt="" />
     </div>
+    <!-- loader section end -->
+
+    <!-- header section start -->
     <header class="bg-[#FFFBF0]">
+      <!-- nav bar section -->
       <nav
         class="flex justify-between items-center max-w-[1200px] m-auto md:py-4 xl:mx-4"
       >
+        <!-- brand & logo -->
         <div class="brand w-60">
           <img src="./icons/logo.png" alt="" />
         </div>
+        <!-- navBar navigators -->
         <ul
           open
           class="navs flex gap-20 capitalize md:bg-gray-800 md:text-white md:w-60 md:justify-center md:items-center md:gap-10 md:fixed right-12 top-10 md:flex-col py-8 cursor-pointer md:rounded-md"
@@ -102,12 +111,16 @@
           <li class="hover:text-green-500">about</li>
           <li class="hover:text-green-500">contact</li>
         </ul>
+        <!-- mobile menu -->
         <div id="mobileMenu" class="hidden md:block cursor-pointer text-xl">
           <i
             class="fa-sharp fa-regular fa-bars-filter border-2 p-3 border-black w-6 h-6 flex justify-center items-center"
           ></i>
         </div>
       </nav>
+      <!-- nab bar end -->
+
+      <!-- banner section start -->
       <div
         id="banner"
         class="flex items-center max-w-[1200px] m-auto xl:mx-4 md:flex-col md:mt-7 md:space-y-8"
@@ -136,9 +149,14 @@
           </div>
         </div>
       </div>
+      <!-- banner section end  -->
     </header>
+    <!-- header end -->
+    <!-- main section || ledies jecket seaction -->
     <main class="max-w-[1200px] m-auto xl:mx-4 mt-16">
+      <!-- ledies section title -->
       <div class="mb-10"><h2 class="bebas-font text-4xl">woman jacket</h2></div>
+      <!-- ledies sectio jachet components -->
       <div class="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
         <div class="p-3.5 shadow-gray-100 shadow-xl rounded-sm">
           <div class="bg-[#F1F1F1] p-14 rounded-md cursor-pointer">
@@ -197,10 +215,16 @@
             </button>
           </div>
         </div>
+        <!-- ledies sectio jachet components end-->
       </div>
     </main>
+    <!-- main section end -->
+    <!-- men jackets section start -->
     <section class="max-w-[1200px] m-auto xl:mx-4 mt-24">
+      <!-- man jacket title  -->
       <div class="mb-10"><h2 class="bebas-font text-4xl">man jacket</h2></div>
+      \
+      <!-- mens jacket section carts -->
       <div class="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
         <div class="p-3.5 shadow-gray-100 shadow-xl rounded-sm">
           <div class="bg-[#F1F1F1] p-14 rounded-md cursor-pointer">
@@ -260,7 +284,9 @@
           </div>
         </div>
       </div>
+      <!-- mens jacket section carts end -->
     </section>
+    <!-- mans jacket section end -->
   </body>
   <script src="./app.js"></script>
 </html>
