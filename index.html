@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       data-purpose="Layout StyleSheet"
       title="Web Awesome"
       href="/css/app-wa-09b459cf485d4b1f3304947240314c05.css?vsn=d"
     />
-
     <link
       rel="stylesheet"
       href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
     />
-
     <link
       rel="stylesheet"
       href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css"
     />
-
     <link
       rel="stylesheet"
       href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css"
     />
-
     <link
       rel="stylesheet"
       href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css"
     />
-
     <link
       rel="stylesheet"
       href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css"
     />
-
     <link
       rel="stylesheet"
       href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Didact+Gothic&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Winter Clothes</title>
 
     <style type="text/tailwindcss">
       @layer utilities {
-        .custom-color {
-          color: rgb(165, 3, 3);
+        .bebas-font {
+          font-family: "Bebas Neue", sans-serif;
+        }
+        .roboto-font {
+          font-family: "Roboto", sans-serif;
         }
       }
     </style>
@@ -51,21 +55,91 @@
     <script>
       tailwind.config = {
         theme: {
-          extend: {
-            colors: {
-              clifford: "#da373d",
-            },
+          screens: {
+            "2xl": { max: "1400px" },
+            // => @media (max-width: 1400px) { ... }
+
+            xl: { max: "1200px" },
+            // => @media (max-width: 1200px) { ... }
+
+            lg: { max: "990px" },
+            // => @media (max-width: 990px) { ... }
+
+            md: { max: "767px" },
+            // => @media (max-width: 767px) { ... }
+
+            sm: { max: "540px" },
+            // => @media (max-width: 540px) { ... }
           },
         },
       };
     </script>
+    <style>
+      h1,
+      h2,
+      h3,
+      h4 {
+        letter-spacing: 0.5px;
+      }
+      p,
+      button,
+      li {
+        letter-spacing: 0.3px;
+      }
+      nav ul li {
+        padding: 2rem 0 2rem 4rem;
+        cursor: pointer;
+        &:hover {
+          color: rgb(0, 154, 36);
+        }
+      }
+    </style>
   </head>
-  <body>
-    <h1 class="text-3xl font-extrabold col-spna p-4 custom-color lg:text-right">
-      Hello world!
-      <i class="fa-regular fa-phone"></i>
-      <i class="fa-regular fa-house"></i>
-      <i class="fa-regular fa-cart-shopping"></i>
-    </h1>
+  <body class="roboto-font">
+    <header class="bg-[#FFFBF0]">
+      <nav
+        class="flex justify-between items-center max-w-[1200px] m-auto md:py-4 xl:mx-4"
+      >
+        <div class="brand w-60"><img src="./icons/logo.png" alt="" /></div>
+        <ul open class="flex capitalize md:hidden">
+          <li>home</li>
+          <li>product</li>
+          <li>about</li>
+          <li>contact</li>
+        </ul>
+        <div class="hidden md:block cursor-pointer text-xl">
+          <i
+            class="fa-sharp fa-regular fa-bars-filter border-2 p-3 border-black w-6 h-6 flex justify-center items-center"
+          ></i>
+        </div>
+      </nav>
+      <div
+        class="flex items-center max-w-[1200px] m-auto xl:mx-4 md:flex-col md:mt-7 md:space-y-8"
+      >
+        <div>
+          <h1
+            class="font-bold text-7xl md:text-6xl leading-[75px] uppercase bebas-font mb-1"
+          >
+            <span class="text-[#FABE4C]">Be the Penguins</span><br /><span
+              >of Winter</span
+            >
+          </h1>
+          <p class="w-9/12 mb-3">
+            Choose your febourate clothes for our stock and order after finish
+            this clothes
+          </p>
+          <button
+            class="bg-gradient-to-tr from-[#A4BC46] to-[#85A019] text-white py-3 px-6 rounded"
+          >
+            <i class="fa-solid fa-cart-shopping text-sm mr-1.5"></i> BUY NOW
+          </button>
+        </div>
+        <div>
+          <div class="ml-16 md:ml-0">
+            <img src="./images/model.png" class="h-full w-full m-auto" />
+          </div>
+        </div>
+      </div>
+    </header>
   </body>
 </html>
